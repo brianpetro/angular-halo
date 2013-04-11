@@ -19,7 +19,7 @@ development:
   encoding: unicode
   database: angular-halo_development
   pool: 5
-  username: angular-halo
+  username: brian
   password:
 
   # Connect on a TCP socket. Omitted by default since the client uses a
@@ -48,13 +48,5 @@ test:
   encoding: unicode
   database: angular-halo_test
   pool: 5
-  username: angular-halo
-  password:
-
-production:
-  adapter: postgresql
-  encoding: unicode
-  database: angular-halo_production
-  pool: 5
-  username: angular-halo
+  username: brian
   password:
