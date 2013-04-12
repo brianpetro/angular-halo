@@ -1,5 +1,5 @@
 @ProjectCtrl = ["$scope", "Project", ($scope, Project) ->
-  $scope.to_dones = Done.query()
+  $scope.projects = Project.query()
 
   $scope.addProject = ->
   	project = Project.save $scope.newProject, ->
