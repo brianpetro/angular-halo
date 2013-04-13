@@ -1,9 +1,10 @@
-<div ng-controller="ProjectCtrl">
+<div ng-controller="ProjectsCtrl">
 	<h1>Listing projects</h1>
 
-	<table>
+	<table class="table table-bordered">
 		<thead>
 		  <tr>
+		  	<th></th>
 		  	<th>Project_Details</th>
 		    <th>Project_Details_Name</th>
 		    <th>Project_Details_Author</th>
@@ -12,6 +13,7 @@
 
 		<tbody>
 		  <tr ng-repeat="project in projects">
+		  	<td><a class="btn" href="/projects/{{ project.id }}">Open</a></td>
 		  	<td>{{ project.details }}</td>
 		  	<td>{{ project.details.name }}</td>
 		  	<td>{{ project.details.author }}</td>
