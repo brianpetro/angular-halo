@@ -1,10 +1,18 @@
 class OrganizationsController < ApplicationController
   before_action :set_organization, only: [:show, :edit, :update, :destroy]
-
+	respond_to :json, :html
   # GET /organizations
   # GET /organizations.json
   def index
     @organizations = Organization.all
+    respond_to do |format|
+    	format.json do
+    		render json: @organizations.as_json
+    	end
+    	format.html do
+    		respond_with @organizations
+    	end
+    end
   end
 
   # GET /organizations/1
