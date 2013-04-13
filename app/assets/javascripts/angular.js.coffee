@@ -7,3 +7,7 @@ app.config ["$httpProvider", ($httpProvider) ->
 app.factory "Project", ["$resource", ($resource) ->
   $resource("/projects", {}, {update: {method: "PUT"}}, {})
 ]
+
+app.factory "Organization", ["$resource", ($resource) ->
+  $resource("/organizations", {}, {update: {method: "PUT"}}, {})
+]

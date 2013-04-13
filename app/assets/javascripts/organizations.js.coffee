@@ -1,3 +1,8 @@
-# Place all the behaviors and hooks related to the matching controller here.
-# All this logic will automatically be available in application.js.
-# You can use CoffeeScript in this file: http://coffeescript.org/
+@OrganizationCtrl = ["$scope", "Organization", ($scope, Organization) ->
+  $scope.organizations = Organization.query()
+
+  $scope.addOrganization = ->
+  	organization = Organization.save $scope.newOrganization, ->
+			$scope.organizations = Organization.query()
+		$scope.newOrganization = {}
+]
