@@ -1,0 +1,15 @@
+// Using 'Cosmo' Bootswatch
+// First import cosmo variables
+@import "bootswatch/cosmo/variables";
+
+// Then bootstrap itself
+@import "bootstrap";
+
+// Bootstrap body padding for fixed navbar
+body { padding-top: 0px; }
+
+// Responsive styles go here in case you want them
+@import "bootstrap-responsive";
+
+// And finally bootswatch style itself
+@import "bootswatch/cosmo/bootswatch";
