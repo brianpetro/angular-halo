@@ -28,4 +28,9 @@ gem 'turbolinks'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 1.0.1'
 
+# Authentication
 gem 'devise', github: 'plataformatec/devise', branch: 'rails4'
+
+# Twitter Bootstrap
+gem 'bootstrap-sass'
+gem 'bootswatch-rails'
