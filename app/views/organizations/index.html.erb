@@ -1,27 +1,23 @@
-<h1>Listing organizations</h1>
+<div ng-controller="OrganizationCtrl">
+	<h1>Listing organizations</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Data</th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
+	<table>
+		<thead>
+		  <tr>
+		    <th>Organization_Data</th>
+		    <th>Organization_Data_is_municipality</th>
+		  </tr>
+		</thead>
 
-  <tbody>
-    <% @organizations.each do |organization| %>
-    <tr>
-      <td><%= organization.data %></td>
-      <td><%= link_to 'Show', organization %></td>
-      <td><%= link_to 'Edit', edit_organization_path(organization) %></td>
-      <td><%= link_to 'Destroy', organization, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-    </tr>
-    <% end %>
-  </tbody>
-</table>
+		<tbody>
+		  <tr ng-repeat="org in organizations">
+		    <td>{{ org.data }}</td>
+		    <td>{{ org.data.is_municipality }}</td>
+		  </tr>
+		</tbody>
+	</table>
 
-<br />
+	<br />
 
-<%= link_to 'New Organization', new_organization_path %>
+	<%= link_to 'New Organization', new_organization_path %>
+</div>
