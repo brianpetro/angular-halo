@@ -12,5 +12,4 @@
 //
 //= require angular-1.1.4/angular.js
 //= require angular-1.1.4/angular-resource.js
-//= require turbolinks
 //= require_tree .
