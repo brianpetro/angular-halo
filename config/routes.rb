@@ -1,4 +1,6 @@
 AngularHalo::Application.routes.draw do
+  resources :entries
+
   resources :organizations
 
   resources :projects
