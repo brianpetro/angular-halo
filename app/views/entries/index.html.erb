@@ -1,27 +1,21 @@
-<h1>Listing entries</h1>
+<div ng-controller="EntriesCtrl">
+	<h1>Listing entries</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Data</th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
+	<table>
+		<thead>
+		  <tr>
+		    <th>Data</th>
+		  </tr>
+		</thead>
 
-  <tbody>
-    <% @entries.each do |entry| %>
-    <tr>
-      <td><%= entry.data %></td>
-      <td><%= link_to 'Show', entry %></td>
-      <td><%= link_to 'Edit', edit_entry_path(entry) %></td>
-      <td><%= link_to 'Destroy', entry, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-    </tr>
-    <% end %>
-  </tbody>
-</table>
+		<tbody>
+		  <tr ng-repeat="entry in entries">
+		    <td>{{ entry }}</td>
+		  </tr>
+		</tbody>
+	</table>
 
-<br />
+	<br />
 
-<%= link_to 'New Entry', new_entry_path %>
+	<%= link_to 'New Entry', new_entry_path %>
+</div>
