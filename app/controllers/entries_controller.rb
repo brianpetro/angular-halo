@@ -5,6 +5,13 @@ class EntriesController < ApplicationController
   # GET /entries.json
   def index
     @entries = Entry.all
+    respond_to do |format|
+    	format.json do
+    		render json: @entries.as_json
+    	end
+    	format.html do
+    	end
+    end
   end
 
   # GET /entries/1
