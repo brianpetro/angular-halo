@@ -9,6 +9,7 @@
 ]
 
 # Project(singular) Controller is used for the show page. Isolates the 'user project page' from the projects index which accesses all of the projects for admin functions.
-@ProjectCtrl = ["$scope", "Project", ($scope, Project) ->
-
+@ProjectCtrl = ["$scope", "$http", ($scope, $http) ->
+	$http.get().success (data) ->
+		  $scope.project = data
 ]
