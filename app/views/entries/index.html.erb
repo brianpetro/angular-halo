@@ -4,13 +4,17 @@
 	<table>
 		<thead>
 		  <tr>
-		    <th>Data</th>
+		    <th>Entry_Data</th>
+		    <th>Entry_Data_Title</th>
+		    <th>Entry_Data_Summary</th>
 		  </tr>
 		</thead>
 
 		<tbody>
 		  <tr ng-repeat="entry in entries">
-		    <td>{{ entry }}</td>
+		    <td>{{ entry.data }}</td>
+		    <td>{{ entry.data.title }}</td>
+		    <td>{{ entry.data.summary }}</td>
 		  </tr>
 		</tbody>
 	</table>
