@@ -11,9 +11,10 @@ group :production do
 	gem 'thin'
 end
 
+gem 'minitest-rails'
+
 group :test do
-	gem 'minitest-rails'
-	gem 'capybara'
+	gem 'minitest-rails-capybara'
 end
 
 # Gems used only for assets and not required
