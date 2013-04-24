@@ -16,6 +16,7 @@ gem 'minitest-rails'
 group :test do
 	gem 'minitest-rails-capybara'
 	gem 'turn'
+	gem 'factory_girl'
 end
 
 # Gems used only for assets and not required
