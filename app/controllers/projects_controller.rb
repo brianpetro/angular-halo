@@ -1,5 +1,6 @@
 class ProjectsController < ApplicationController
   before_action :set_project, only: [:show, :edit, :update, :destroy]
+  before_action :get_entries, only: [:show]
 	respond_to :json, :html
   # GET /projects
   # GET /projects.json
@@ -73,6 +74,10 @@ class ProjectsController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_project
       @project = Project.find(params[:id])
+    end
+
+    def get_entries
+			@entries = Entry.where(project_id: @project.id)
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
