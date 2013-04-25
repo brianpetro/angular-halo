@@ -1,5 +1,5 @@
 class Organization < ActiveRecord::Base
-  %w[is_municipality].each do |key|
+  %w[is_municipality name].each do |key|
     scope "has_#{key}", lambda { |value| where("data @> hstore(?, ?)", key, value) }
 
     define_method(key) do
