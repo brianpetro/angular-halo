@@ -1,4 +1,15 @@
 <div ng-controller="ProjectCtrl">
 	<h1>This is {{ project.details.name }}</h1>
 
+	<h2>Entries</h2>
+	<% @entries.each do |e| %>
+	<ul>
+		<li>
+			<%= e.title %>
+		</li>
+		<li>
+			<%= e.summary %>
+		</li>
+	</ul>
+	<% end %>
 </div>
