@@ -2,14 +2,15 @@
 	<h1>This is {{ project.details.name }}</h1>
 
 	<h2>Entries</h2>
-	<% @entries.each do |e| %>
-	<ul>
+	<ul ng-repeat=" e in project.entries ">
 		<li>
-			<%= e.title %>
+			{{ e.id }}
 		</li>
 		<li>
-			<%= e.summary %>
+			{{ e.title }}
+		</li>
+		<li>
+			{{ e.summary }}
 		</li>
 	</ul>
-	<% end %>
 </div>
