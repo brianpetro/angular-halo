@@ -3,6 +3,13 @@
 <h1><%= @organization.name %></h1>
 <p class="lead">Municipality?: <%= @organization.is_municipality %></p>
 
+<% @projects.each do |p| %>
+<ul>
+	<li>
+		<%= p.name %>
+	</li>
+</ul>
+<% end %>
 <br>
 <%= link_to 'Edit', edit_organization_path(@organization) %> |
 <%= link_to 'Back', organizations_path %>
