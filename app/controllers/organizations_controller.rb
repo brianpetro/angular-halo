@@ -1,5 +1,6 @@
 class OrganizationsController < ApplicationController
   before_action :set_organization, only: [:show, :edit, :update, :destroy]
+  before_action :get_projects, only: [:show]
 	respond_to :json, :html
   # GET /organizations
   # GET /organizations.json
@@ -73,6 +74,10 @@ class OrganizationsController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_organization
       @organization = Organization.find(params[:id])
+    end
+
+    def get_projects
+			@projects = Project.where(organization_id: @organization.id)
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
