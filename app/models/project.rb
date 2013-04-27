@@ -1,6 +1,6 @@
 class Project < ActiveRecord::Base
 
-  %w[name author organization_id].each do |key|
+  %w[name author].each do |key|
     scope "has_#{key}", lambda { |value| where("details @> hstore(?, ?)", key, value) }
 
     define_method(key) do
