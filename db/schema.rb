@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130425141659) do
+ActiveRecord::Schema.define(version: 20130426235654) do
 
   create_table "entries", force: true do |t|
     t.hstore   "data"
@@ -32,6 +32,7 @@ ActiveRecord::Schema.define(version: 20130425141659) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.hstore   "details"
+    t.integer  "organization_id"
   end
 
   create_table "users", force: true do |t|
