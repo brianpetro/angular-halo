@@ -8,6 +8,8 @@ require "active_support/testing/setup_and_teardown"
 # to the test group in the Gemfile and uncomment the following:
 require "minitest/rails/capybara"
 
+require 'capybara/poltergeist'
+Capybara.javascript_driver = :poltergeist
 # Uncomment for awesome colorful output
 # require "minitest/pride"
 
