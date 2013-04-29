@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130429173708) do
+ActiveRecord::Schema.define(version: 20130429202151) do
 
   create_table "entries", force: true do |t|
     t.hstore   "data"
@@ -25,6 +25,7 @@ ActiveRecord::Schema.define(version: 20130429173708) do
   create_table "notes", force: true do |t|
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.hstore   "data"
   end
 
   create_table "organizations", force: true do |t|
