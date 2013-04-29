@@ -124,7 +124,10 @@ GEM
       multi_json (~> 1.0)
     factory_girl (4.1.0)
       activesupport (>= 3.0.0)
+    faye-websocket (0.4.7)
+      eventmachine (>= 0.12.0)
     hike (1.2.2)
+    http_parser.rb (0.5.3)
     i18n (0.6.4)
     jbuilder (1.0.2)
       activesupport (>= 3.0.0)
@@ -157,6 +160,10 @@ GEM
     nokogiri (1.5.9)
     orm_adapter (0.4.0)
     pg (0.15.1)
+    poltergeist (1.2.0)
+      capybara (~> 2.1.0)
+      faye-websocket (~> 0.4, >= 0.4.4)
+      http_parser.rb (~> 0.5.3)
     polyglot (0.3.3)
     quiet_assets (1.0.2)
       railties (>= 3.1, < 5.0)
@@ -213,6 +220,7 @@ DEPENDENCIES
   minitest-rails
   minitest-rails-capybara
   pg
+  poltergeist
   quiet_assets
   railroady
   rails!

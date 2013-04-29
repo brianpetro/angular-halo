@@ -20,6 +20,7 @@ end
 gem 'minitest-rails'
 
 group :test do
+	gem 'poltergeist'
 	gem 'minitest-rails-capybara'
 	gem 'turn'
 	gem 'factory_girl'
