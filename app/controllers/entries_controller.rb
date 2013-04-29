@@ -76,7 +76,7 @@ class EntriesController < ApplicationController
     end
 
     def get_notes
-      @notes = Note.where(entry_id: @entry.id)
+      @notes = Note.where(entry_id: params[:id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
