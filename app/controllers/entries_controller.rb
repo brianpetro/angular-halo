@@ -1,5 +1,6 @@
 class EntriesController < ApplicationController
   before_action :set_entry, only: [:show, :edit, :update, :destroy]
+  before_action :get_notes, only: [:show]
 
   # GET /entries
   # GET /entries.json
@@ -72,6 +73,10 @@ class EntriesController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_entry
       @entry = Entry.find(params[:id])
+    end
+
+    def get_notes
+      @notes = Note.where(entry_id: @entry.id)
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
