@@ -1,23 +1,23 @@
 <p id="notice"><%= notice %></p>
 
-<% @notes.each do |note| %>
-	<ul>
+<div ng-controller="EntryCtrl">
+	<ul ng-repeat="note in entry.notes">
 		<li>
-			<%= note.id %>
+			{{ note.id }}
 		</li>
 		<li>
-			<%= note.tldr %>
+			{{ note.tldr }}
 		</li>
 		<li>
-			<%= note.concern %>
+			{{ note.concern }}
 		</li>
 		<li>
-			<%= note.author %>
+			{{ note.author }}
 		</li>
 		<li>
-			<%= note.data %>
+			{{ note }}
 		</li>
 	</ul>
-<% end %>
+</div>
 <%= link_to 'Edit', edit_entry_path(@entry) %> |
 <%= link_to 'Back', entries_path %>
