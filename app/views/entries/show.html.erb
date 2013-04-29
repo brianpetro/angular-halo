@@ -1,9 +1,23 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Data:</strong>
-  <%= @entry.data %>
-</p>
-
+<% @notes.each do |note| %>
+	<ul>
+		<li>
+			<%= note.id %>
+		</li>
+		<li>
+			<%= note.tldr %>
+		</li>
+		<li>
+			<%= note.concern %>
+		</li>
+		<li>
+			<%= note.author %>
+		</li>
+		<li>
+			<%= note.data %>
+		</li>
+	</ul>
+<% end %>
 <%= link_to 'Edit', edit_entry_path(@entry) %> |
 <%= link_to 'Back', entries_path %>
