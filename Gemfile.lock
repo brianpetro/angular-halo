@@ -95,6 +95,11 @@ GEM
     ansi (1.4.3)
     atomic (1.1.7)
     bcrypt-ruby (3.0.1)
+    better_errors (0.7.0)
+      coderay (>= 1.0.0)
+      erubis (>= 2.6.6)
+    binding_of_caller (0.7.1)
+      debug_inspector (>= 0.0.1)
     bootstrap-sass (2.3.0.1)
       sass (~> 3.2)
     bootswatch-rails (0.4.0)
@@ -106,11 +111,13 @@ GEM
       rack (>= 1.0.0)
       rack-test (>= 0.5.4)
       xpath (~> 2.0)
+    coderay (1.0.9)
     coffee-script (2.2.0)
       coffee-script-source
       execjs
     coffee-script-source (1.6.2)
     daemons (1.1.9)
+    debug_inspector (0.0.2)
     erubis (2.7.0)
     eventmachine (1.0.3)
     execjs (1.4.0)
@@ -151,9 +158,12 @@ GEM
     orm_adapter (0.4.0)
     pg (0.15.1)
     polyglot (0.3.3)
+    quiet_assets (1.0.2)
+      railties (>= 3.1, < 5.0)
     rack (1.5.2)
     rack-test (0.6.2)
       rack (>= 1.0)
+    railroady (1.1.0)
     rake (10.0.4)
     sass (3.2.7)
     sprockets (2.9.2)
@@ -191,6 +201,8 @@ PLATFORMS
 DEPENDENCIES
   activerecord-deprecated_finders!
   arel!
+  better_errors
+  binding_of_caller
   bootstrap-sass
   bootswatch-rails
   coffee-rails!
@@ -201,6 +213,8 @@ DEPENDENCIES
   minitest-rails
   minitest-rails-capybara
   pg
+  quiet_assets
+  railroady
   rails!
   sass-rails!
   sprockets-rails!

@@ -10,6 +10,12 @@ gem 'pg'
 group :production do
 	gem 'thin'
 end
+group :development do
+  gem 'railroady'
+	gem "better_errors"
+	gem "binding_of_caller"
+	gem "quiet_assets"
+end
 
 gem 'minitest-rails'
 
