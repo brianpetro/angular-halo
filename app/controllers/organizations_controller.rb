@@ -77,7 +77,7 @@ class OrganizationsController < ApplicationController
     end
 
     def get_projects
-			@projects = Project.where(organization_id: @organization.id)
+			@projects = Project.where(organization_id: params[:id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
